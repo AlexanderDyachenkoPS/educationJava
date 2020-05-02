@@ -64,7 +64,11 @@ public class PracticeMain {
         printLane("Task 1. Check Palindrome");
 
         Palindrome pa = new Palindrome();
-        pa.checkPalindrome("1232,24me0");
+        String maybePalindrome = "1232,24m  e0";
+        System.out.println(maybePalindrome + (pa.checkPalindrome(maybePalindrome) ? " is " : " is not") + " a palindrome" );
+
+        maybePalindrome = "a,,ni...ki%$n@#$a";
+        System.out.println(maybePalindrome + (pa.checkPalindrome(maybePalindrome) ? " is " : " is not") + " a palindrome" );
 
         printLane("Task 3. Chat Parser");
 

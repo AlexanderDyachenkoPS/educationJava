@@ -5,19 +5,11 @@ import java.util.regex.Pattern;
 
 public class Palindrome {
 
-    private String regexpPattern = "";
+    private String regexpPattern = "[^a-zA-Z0-9]";
 
-    public void checkPalindrome (String palindrome) {
+    public boolean checkPalindrome (String palindrome) {
 
-        String name2ASCII = palindrome.replaceAll("[^\\x00-\\x7F]", "").replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "").replaceAll("\\p{C}", "");
-
-        Pattern pattern =  Pattern.compile(regexpPattern);
-        Matcher matcher = pattern.matcher(name2ASCII);
-
-        if (matcher.find()) {
-
-            System.out.println(matcher.group(0));
-        }
-
+        return palindrome.replaceAll(regexpPattern,"").toString().equals(
+        new StringBuilder(palindrome.replaceAll(regexpPattern, "")).reverse().toString());
     }
 }
