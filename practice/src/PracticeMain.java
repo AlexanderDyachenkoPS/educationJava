@@ -31,28 +31,42 @@ public class PracticeMain {
 
     public static void main(String[] args) {
         printHead("practice 1");
+        printLane("Task 1.");
            Task001.printHello();
+        printLane("Task 2.");
            Task002.quiz();
         printHead("practice 2");
 
         TypesTasks tt = new TypesTasks();
-
-
-        printLane("Day of next NY");
+        printLane("Task 1.");
+        byte a = 12;
+        tt.task1(a);
+        a = -128;
+        tt.task1(a);
+        printLane("Task 2.");
+        tt.task2();
+        printLane("Task 3.");
+        tt.task3();
+        printLane("Task 4.");
+        tt.task4();
+        printLane("Task 5.");
+        tt.task5(5);
+        tt.task5(64);
+        printLane("Task 6. Day of next NY");
         tt.NYDay(1);
-        printLane("Day of NY + 5 years");
+        printLane("Task 6. Day of NY + 5 years");
         tt.NYDay(5);
 
         printHead("practice 3");
         printHead("practice 4");
 
 
-        printLane("Check Palindrome");
+        printLane("Task 1. Check Palindrome");
 
         Palindrome pa = new Palindrome();
         pa.checkPalindrome("1232,24me0");
 
-        printLane("Chat Parser");
+        printLane("Task 3. Chat Parser");
 
         ChatParser cp = new ChatParser();
 
