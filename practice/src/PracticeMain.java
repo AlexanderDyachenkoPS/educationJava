@@ -4,9 +4,12 @@ import com.example.education.practice001.Task002;
 import com.example.education.practice002.TypesTasks;
 //import com.example.education.practice003.*;
 //import com.example.education.practice004.*;
+import com.example.education.practice003.Compress;
 import com.example.education.practice004.ChatParser;
 import com.example.education.practice004.Palindrome;
 import com.example.education.practice004.SnilsValidator;
+
+import java.util.ArrayList;
 //import com.example.education.practice005.*;
 
 public class PracticeMain {
@@ -59,6 +62,35 @@ public class PracticeMain {
         tt.NYDay(5);
 
         printHead("practice 3");
+
+        printLane("Task 3. Array compression");
+
+        ArrayList<Integer> arrayList4Compression = new ArrayList<Integer>();
+        arrayList4Compression.add(1);
+        arrayList4Compression.add(2);
+        arrayList4Compression.add(2);
+        arrayList4Compression.add(2);
+        arrayList4Compression.add(3);
+        arrayList4Compression.add(3);
+        arrayList4Compression.add(4);
+        arrayList4Compression.add(3);
+        arrayList4Compression.add(4);
+        arrayList4Compression.add(4);
+        arrayList4Compression.add(4);
+        arrayList4Compression.add(4);
+        arrayList4Compression.add(1);
+        arrayList4Compression.add(1);
+        arrayList4Compression.add(2);
+        System.out.println("Initial Array: " + arrayList4Compression.toString());
+        ArrayList<Integer> arrayList4Compressed = new ArrayList<Integer>();
+        System.out.println("Compressed" +
+                " Array: " + Compress.compress(arrayList4Compression).toString());
+        System.out.println("Decompressed" +
+                " Array: " + Compress.decompress(Compress.compress(arrayList4Compression)).toString());
+
+        System.out.println("Arrays are " + (arrayList4Compression.equals(Compress.decompress(Compress.compress(arrayList4Compression))) ? "equal" : "not equal"));
+
+
         printHead("practice 4");
 
 
