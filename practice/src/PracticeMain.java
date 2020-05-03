@@ -2,9 +2,10 @@ import com.example.education.practice001.Task001;
 import com.example.education.practice001.Task002;
 
 import com.example.education.practice002.TypesTasks;
-//import com.example.education.practice003.*;
-//import com.example.education.practice004.*;
+
 import com.example.education.practice003.Compress;
+import com.example.education.practice003.LongArray;
+import com.example.education.practice003.Perforator;
 import com.example.education.practice004.ChatParser;
 import com.example.education.practice004.Palindrome;
 import com.example.education.practice004.SnilsValidator;
@@ -63,6 +64,10 @@ public class PracticeMain {
 
         printHead("practice 3");
 
+        printLane("Task 1. Performance");
+
+        Perforator.comparePerf();
+
         printLane("Task 3. Array compression");
 
         ArrayList<Integer> arrayList4Compression = new ArrayList<Integer>();
@@ -89,6 +94,14 @@ public class PracticeMain {
                 " Array: " + Compress.decompress(Compress.compress(arrayList4Compression)).toString());
 
         System.out.println("Arrays are " + (arrayList4Compression.equals(Compress.decompress(Compress.compress(arrayList4Compression))) ? "equal" : "not equal"));
+
+
+        printLane("Task 6. Long array ");
+
+        int[] longArray = LongArray.formArray(120);
+        for (int i = 0; i < longArray.length; i++) {
+            System.out.print(longArray[i] + ",");
+        }
 
 
         printHead("practice 4");
