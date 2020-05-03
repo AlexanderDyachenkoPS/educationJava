@@ -6,6 +6,7 @@ import com.example.education.practice002.TypesTasks;
 //import com.example.education.practice004.*;
 import com.example.education.practice004.ChatParser;
 import com.example.education.practice004.Palindrome;
+import com.example.education.practice004.SnilsValidator;
 //import com.example.education.practice005.*;
 
 public class PracticeMain {
@@ -69,6 +70,13 @@ public class PracticeMain {
 
         maybePalindrome = "a,,ni...ki%$n@#$a";
         System.out.println(maybePalindrome + (pa.checkPalindrome(maybePalindrome) ? " is " : " is not") + " a palindrome" );
+
+        printLane("Task 2. SNILS");
+        SnilsValidator sv = new SnilsValidator();
+        String snils = "123-435-462 30";
+        System.out.println(snils + (sv.validate(snils) ? " is " : " is not") + " valid" );
+        System.out.println("checksum for " + snils + (sv.snilsCheckSum(snils) ? " is " : " is not") + " valid" );
+
 
         printLane("Task 3. Chat Parser");
 
