@@ -4,6 +4,7 @@ import com.example.education.practice001.Task002;
 import com.example.education.practice002.TypesTasks;
 
 import com.example.education.practice003.Compress;
+import com.example.education.practice003.Contracts;
 import com.example.education.practice003.LongArray;
 import com.example.education.practice003.Perforator;
 import com.example.education.practice004.ChatParser;
@@ -95,10 +96,14 @@ public class PracticeMain {
 
         System.out.println("Arrays are " + (arrayList4Compression.equals(Compress.decompress(Compress.compress(arrayList4Compression))) ? "equal" : "not equal"));
 
+        printLane("Task 5. Group by contract ");
+
+        Contracts.parse();
+
 
         printLane("Task 6. Long array ");
 
-        int[] longArray = LongArray.formArray(120);
+        int[] longArray = LongArray.formArray(15);
         for (int i = 0; i < longArray.length; i++) {
             System.out.print(longArray[i] + ",");
         }
