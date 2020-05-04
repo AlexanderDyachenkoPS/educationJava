@@ -3,15 +3,15 @@ import com.example.education.practice001.Task002;
 
 import com.example.education.practice002.TypesTasks;
 
-import com.example.education.practice003.Compress;
-import com.example.education.practice003.Contracts;
-import com.example.education.practice003.LongArray;
-import com.example.education.practice003.Perforator;
+import com.example.education.practice003.*;
 import com.example.education.practice004.ChatParser;
 import com.example.education.practice004.Palindrome;
 import com.example.education.practice004.SnilsValidator;
+import com.example.education.practice005.LadaGranta;
+import com.example.education.practice005.VehicleTypes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 //import com.example.education.practice005.*;
 
 public class PracticeMain {
@@ -96,6 +96,13 @@ public class PracticeMain {
 
         System.out.println("Arrays are " + (arrayList4Compression.equals(Compress.decompress(Compress.compress(arrayList4Compression))) ? "equal" : "not equal"));
 
+        printLane("Task 4. Union and sort ");
+
+        long[] longA = {222,777,333};
+        long[] longB = {888,555,111};
+
+        System.out.println(Arrays.toString(UnionSort.unionAndSort(longA,longB)));
+
         printLane("Task 5. Group by contract ");
 
         Contracts.parse();
@@ -152,5 +159,9 @@ public class PracticeMain {
      //   System.out.print(cp.printNickChatting(nickNames, textLines));
 
         printHead("practice 5");
+
+        LadaGranta lg = new LadaGranta(VehicleTypes.CAR.name(), 500000, "Lada", "What a fuck is going on with this car");
+        lg.emotion();
+
     }
 }
