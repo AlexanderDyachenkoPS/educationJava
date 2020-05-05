@@ -1,45 +1,47 @@
 package com.example.education.practice005;
 
-public abstract class Vehicle {
+public class Vehicle {
 
-    private String vehicleType;
-    private int price;
-    private String brand;
+    private String registrationNumber;
+    private String vendor;
+    private String model;
+
+    public static final String UNKNOWN_VEHICLE = "";
 
 
-    Vehicle(String vehicleType, int price, String brand) {
-        setBrand(brand);
-        setPrice(price);
-        setVehicleType(vehicleType);
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public String getVehicleType() {
-        return vehicleType;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
+    public String getVendor() {
+        return vendor;
     }
 
-    public int getPrice() {
-        return price;
+    public void setVendor(String vendor) {
+        this.vendor = vendor;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getModel() {
+        return model;
     }
 
-    public String getBrand() {
-        return brand;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public Vehicle() {
+        this.registrationNumber = "";
+        this.vendor = "";
+        this.model = "";
     }
 
-    public void buy (int quantity) {
-        System.out.println("Buy " + quantity + " " + getClass() + " entities");
+    public Vehicle(String registrationNumber, String vendor, String model) {
+        this.registrationNumber = UNKNOWN_VEHICLE;
+        this.vendor = UNKNOWN_VEHICLE;
+        this.model = UNKNOWN_VEHICLE;
     }
-
-    public abstract void emotion();
 }

@@ -7,7 +7,6 @@ import com.example.education.practice003.*;
 import com.example.education.practice004.ChatParser;
 import com.example.education.practice004.Palindrome;
 import com.example.education.practice004.SnilsValidator;
-import com.example.education.practice005.LadaGranta;
 import com.example.education.practice005.VehicleTypes;
 
 import java.util.ArrayList;
@@ -68,6 +67,26 @@ public class PracticeMain {
         printLane("Task 1. Performance");
 
         Perforator.comparePerf();
+
+        printLane("Task 2. BitImage");
+
+        long l = 235135135L;
+
+        System.out.println(l + " ===>>> " + Long.toBinaryString(l));
+
+        double d = 75.38;
+        String sResult = "";
+        long numberBits = Double.doubleToLongBits(d);
+
+        sResult = Long.toBinaryString(numberBits);
+        System.out.println("Представление вещественного числа в формате чисел с плавающей точкой");
+
+        System.out.format("Число: %5.2f\n", d);
+        System.out.println("Формат чисел с плавающей точкой:");
+
+//ведущий ноль заботливо сокращен системой, поэтому его нужно восстановить
+        System.out.println(d > 0 ? "0" + sResult : sResult);
+
 
         printLane("Task 3. Array compression");
 
@@ -160,8 +179,6 @@ public class PracticeMain {
 
         printHead("practice 5");
 
-        LadaGranta lg = new LadaGranta(VehicleTypes.CAR.name(), 500000, "Lada", "What a fuck is going on with this car");
-        lg.emotion();
 
     }
 }
