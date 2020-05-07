@@ -175,7 +175,7 @@ public class PracticeMain {
                 "xxx: не могу найти выход из стартовой локации в игре )    ",
                 "yyy: Ахахахаха    ",
                 "xxx: я даже кнопку выход там не нашел, как старпер вышел по Alt+F4    "};
-     //   System.out.print(cp.printNickChatting(nickNames, textLines));
+        System.out.print(cp.printNickChatting(nickNames, textLines));
 
         printHead("practice 5");
 
