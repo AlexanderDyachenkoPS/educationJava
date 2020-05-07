@@ -10,6 +10,13 @@ public final class VenicleImmu {
 
     public static final String UNKNOWN_VEHICLE = "";
 
+    public VenicleImmu() {
+        this.registrationNumber = UNKNOWN_VEHICLE;
+        this.vendor = UNKNOWN_VEHICLE;
+        this.model = UNKNOWN_VEHICLE;
+        this.type = UNKNOWN_VEHICLE;
+    }
+
     public VenicleImmu(String registrationNumber, String vendor, String model, String type) {
         this.registrationNumber = registrationNumber;
         this.vendor = vendor;

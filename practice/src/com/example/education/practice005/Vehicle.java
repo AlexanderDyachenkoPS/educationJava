@@ -34,14 +34,14 @@ public class Vehicle {
     }
 
     public Vehicle() {
-        this.registrationNumber = "";
-        this.vendor = "";
-        this.model = "";
-    }
-
-    public Vehicle(String registrationNumber, String vendor, String model) {
         this.registrationNumber = UNKNOWN_VEHICLE;
         this.vendor = UNKNOWN_VEHICLE;
         this.model = UNKNOWN_VEHICLE;
+    }
+
+    public Vehicle(String registrationNumber, String vendor, String model) {
+        this.registrationNumber = registrationNumber;
+        this.vendor = vendor;
+        this.model = model;
     }
 }
